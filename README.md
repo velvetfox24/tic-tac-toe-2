@@ -69,22 +69,166 @@ The application follows a clean, single-page state pattern without complex exter
 
 ---
 
-## 🚀 Local Preview Instructions
+## 📥 Installation & Running Locally
 
-Since the game is built using vanilla web technologies, you can run it locally without any installation or compile steps:
+Since the game is built using vanilla web technologies, you can run it locally on almost any platform. Below are step-by-step guides and one-liner commands to install dependencies, clone, and run the game on various operating systems.
 
-### Option 1: Direct File Opening
-Simply open `src/index.html` directly in any modern web browser.
+---
 
-### Option 2: Python Local Server (Recommended)
-If you want to run it via a local HTTP server:
-1. Open your terminal in the project directory.
-2. Start Python's built-in HTTP server:
+### 🟢 Ubuntu
+
+**Step-by-Step:**
+1. Update system packages:
+   ```bash
+   sudo apt update
+   ```
+2. Install `git` and `python3`:
+   ```bash
+   sudo apt install -y git python3
+   ```
+3. Clone this repository:
+   ```bash
+   git clone https://github.com/velvetfox24/tic-tac-toe-2.git
+   ```
+4. Navigate into the repository directory:
+   ```bash
+   cd tic-tac-toe-2
+   ```
+5. Start the local server:
    ```bash
    python3 -m http.server 8000
    ```
-3. Open your browser and navigate to:
-   [http://localhost:8000/src/](http://localhost:8000/src/)
+6. Open your browser and navigate to: [http://localhost:8000/src/](http://localhost:8000/src/)
+
+**Single-Line Installation Command:**
+```bash
+sudo apt update && sudo apt install -y git python3 && git clone https://github.com/velvetfox24/tic-tac-toe-2.git && cd tic-tac-toe-2 && python3 -m http.server 8000
+```
+
+---
+
+### 💀 Kali Linux
+
+**Step-by-Step:**
+1. Update repository packages:
+   ```bash
+   sudo apt update
+   ```
+2. Install dependencies (`git` and `python3`):
+   ```bash
+   sudo apt install -y git python3
+   ```
+3. Clone this repository:
+   ```bash
+   git clone https://github.com/velvetfox24/tic-tac-toe-2.git
+   ```
+4. Navigate into the repository directory:
+   ```bash
+   cd tic-tac-toe-2
+   ```
+5. Run the Python web server:
+   ```bash
+   python3 -m http.server 8000
+   ```
+6. Open your browser and navigate to: [http://localhost:8000/src/](http://localhost:8000/src/)
+
+**Single-Line Installation Command:**
+```bash
+sudo apt update && sudo apt install -y git python3 && git clone https://github.com/velvetfox24/tic-tac-toe-2.git && cd tic-tac-toe-2 && python3 -m http.server 8000
+```
+
+---
+
+### 🛡️ Arch Linux
+
+**Step-by-Step:**
+1. Sync repository databases and update system:
+   ```bash
+   sudo pacman -Syu --noconfirm
+   ```
+2. Install `git` and `python`:
+   ```bash
+   sudo pacman -S --needed --noconfirm git python
+   ```
+3. Clone this repository:
+   ```bash
+   git clone https://github.com/velvetfox24/tic-tac-toe-2.git
+   ```
+4. Navigate into the repository directory:
+   ```bash
+   cd tic-tac-toe-2
+   ```
+5. Run the local HTTP server:
+   ```bash
+   python3 -m http.server 8000
+   ```
+6. Open your browser and navigate to: [http://localhost:8000/src/](http://localhost:8000/src/)
+
+**Single-Line Installation Command:**
+```bash
+sudo pacman -Syu --needed --noconfirm git python && git clone https://github.com/velvetfox24/tic-tac-toe-2.git && cd tic-tac-toe-2 && python3 -m http.server 8000
+```
+
+---
+
+### 💻 Windows PowerShell
+
+**Step-by-Step:**
+1. Clone the repository using Git:
+   ```powershell
+   git clone https://github.com/velvetfox24/tic-tac-toe-2.git
+   ```
+2. Navigate into the repository directory:
+   ```powershell
+   cd tic-tac-toe-2
+   ```
+3. Launch the game directly in your default browser:
+   ```powershell
+   Start-Process src/index.html
+   ```
+   *(Alternatively, if Python is installed, run a local web server with `python -m http.server 8000`)*
+
+**Single-Line Installation Command (Direct Browser Launch):**
+```powershell
+git clone https://github.com/velvetfox24/tic-tac-toe-2.git; cd tic-tac-toe-2; Start-Process src/index.html
+```
+
+**Single-Line Installation Command (Python HTTP Server):**
+```powershell
+git clone https://github.com/velvetfox24/tic-tac-toe-2.git; cd tic-tac-toe-2; python -m http.server 8000
+```
+
+---
+
+### 📱 Termux (Android)
+
+**Step-by-Step:**
+1. Update repository packages:
+   ```bash
+   pkg update -y
+   ```
+2. Install `git` and `python`:
+   ```bash
+   pkg install -y git python
+   ```
+3. Clone the repository:
+   ```bash
+   git clone https://github.com/velvetfox24/tic-tac-toe-2.git
+   ```
+4. Navigate into the repository directory:
+   ```bash
+   cd tic-tac-toe-2
+   ```
+5. Start the web server:
+   ```bash
+   python -m http.server 8000
+   ```
+6. Open your mobile browser and navigate to: `http://localhost:8000/src/`
+
+**Single-Line Installation Command:**
+```bash
+pkg update -y && pkg install -y git python && git clone https://github.com/velvetfox24/tic-tac-toe-2.git && cd tic-tac-toe-2 && python -m http.server 8000
+```
 
 ---
 

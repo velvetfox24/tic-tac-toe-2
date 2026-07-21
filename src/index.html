@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play Ultimate Tic-Tac-Toe - Tic-Tac-Toe Lvl 2, a clean, modern web implementation featuring dynamic move constraints, responsive board layout, and gorgeous dark-mode styling.">
+  <title>Ultimate Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Ultimate Tic-Tac-Toe</h1>
+    <p class="subtitle">Tic-Tac-Toe Lvl 2 - The Ultimate Strategic Challenge</p>
+  </header>
+
+  <section class="status-panel">
+    <div class="turn-indicator">
+      <span>Turn:</span>
+      <div id="player-badge" class="player-badge player-x">Player X</div>
+    </div>
+    <div id="instruction-text" class="instruction-text">
+      Make your move! Select any cell to begin.
+    </div>
+  </section>
+
+  <main class="game-container">
+    <div id="global-board" class="global-board">
+      <!-- Generated dynamically by game.js -->
+    </div>
+
+    <!-- Global Winner / Game Over Overlay -->
+    <div id="global-overlay" class="global-overlay">
+      <h2 id="global-winner-text" class="global-winner-text">Player X Wins!</h2>
+      <p id="global-winner-sub" class="global-winner-sub">The global grid has been conquered.</p>
+      <button class="primary" onclick="initGame()">Play Again</button>
+    </div>
+  </main>
+
+  <section class="controls">
+    <button id="rules-btn" class="secondary-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      How to Play
+    </button>
+    <button id="reset-btn" class="primary secondary-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+      Reset Game
+    </button>
+  </section>
+
+  <!-- Rules Modal -->
+  <div id="rules-modal" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Game Rules</h2>
+        <button id="modal-close-btn" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Ultimate Tic-Tac-Toe</strong> (Tic-Tac-Toe Lvl 2) is a strategic version of the classic game. It takes place on a 3x3 global grid of 9 local boards, making 81 total cells.</p>
+        
+        <h3>1. The Move Link Rule</h3>
+        <p>Your move dictates where your opponent must play next. Whichever cell index you choose within a local board forces your opponent to play inside the corresponding local board index of the global grid.</p>
+        <p><em>Example:</em> If you play in the top-right cell of the center board, your opponent's next move must be made anywhere inside the top-right local board.</p>
+
+        <h3>2. Wildcard State (Free Choice)</h3>
+        <p>If a player is directed to a local board that has already been won or is completely filled (draw), the targeting restriction is cleared. The player is granted a <strong>Free Choice</strong> wildcard and may make their move in any open cell on any active board.</p>
+
+        <h3>3. Winning Local Boards</h3>
+        <p>A local board is won by getting three marks in a row (horizontal, vertical, or diagonal) on that board. Once won, that board is claimed and display a large overlay of the winning symbol.</p>
+
+        <h3>4. Winning the Global Game</h3>
+        <p>To win the entire game, you must win three local boards in a row (horizontal, vertical, or diagonal) on the global grid.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Ultimate Tic-Tac-Toe Contributors
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

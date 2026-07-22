@@ -264,13 +264,14 @@ h1 {
   border-radius: 12px;
   z-index: 10;
   opacity: 0;
-  pointer-events: auto;
+  pointer-events: none;
   transform: scale(0.9);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .board-overlay.show {
   opacity: 1;
+  pointer-events: auto;
   transform: scale(1);
 }
 
